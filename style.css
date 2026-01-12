@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.home {
+  background-color: #f0f4ff;
+}
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+nav {
+  background-color: #444;
+  padding: 10px;
+  text-align: center;
+  font-size: larger;
+}
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+}
+.banner {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+main {
+  display: flex;
+}
+main p {
+  font-size: larger;
+}
+section {
+  width: 70%;
+  padding: 20px;
+}
+aside {
+  width: 30%;
+  padding: 20px;
+  background-color: #ddd;
+}
+aside a {
+  font-size: larger;
+}
+.content {
+  padding: 20px;
+}
+.project {
+  width: 250px;
+  margin: 10px;
+}
+.highlight {
+  color: blue;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #222;
+  color: white;
+}
+.contact-header {
+  text-align: center;
+  padding: 80px 20px;
+}
+.contact-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.contact-header p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  margin-left: 200px;
+}
+.contact-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #deab5f;
+  padding: 30px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+.contact-card h2 {
+  color: #deab5f;
+  margin-bottom: 15px;
+}
+.contact-card a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.contact-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(222, 171, 95, 0.1);
+}
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 15%;
+}
+.service-card {
+  width: 100%;
+  padding: 35px 40px;
+  border-left: 6px solid #deab5f;
+  background: linear-gradient(
+    to right,
+    rgba(222, 171, 95, 0.12),
+    rgba(0, 0, 0, 0)
+  );
+  text-align: left;
+  transition: transform 0.3s, padding-left 0.3s;
+}
+.service-card h2 {
+  font-size: 2.2rem;
+  color: #deab5f;
+  margin-bottom: 12px;
+}
+.service-card p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 700px;
+}
+.service-card:hover {
+  transform: translateX(10px);
+  padding-left: 50px;
+}
+.about-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+.about-intro {
+  max-width: 900px;
+  padding: 50px;
+  margin-left: 45%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+}
+.about-intro p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-top: 20px;
+  opacity: 0.95;
+}
+.about-img {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #deab5f;
+  opacity: 0.9;
+}
+.float-left {
+  left: -45px;
+  top: -45px;
+}
+.float-right {
+  right: -45px;
+  bottom: -45px;
+}
+.interests-section {
+  padding: 90px 20px;
+  margin-left: 15%;
+  text-align: center;
+}
+.interests-section h2 {
+  font-size: 2.6rem;
+  color: #deab5f;
+  margin-bottom: 20px;
+}
+.interests-section p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+.interests-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.interests-gallery img {
+  width: 220px;
+  border-radius: 18px;
+  filter: grayscale(20%);
+  transition: transform 0.4s, filter 0.4s;
+}
+.interests-gallery img:hover {
+  transform: scale(1.07);
+  filter: grayscale(0%);
+}

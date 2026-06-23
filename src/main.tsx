@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 import "./index.css";
+import "./styles/panels.css";
 
 ReactDOM.createRoot(
   document.getElementById("root")!

@@ -1,3 +1,11 @@
+import vector1 from "../assets/images/Vector-1.png";
+import vector2 from "../assets/images/Vector-2.png";
+import vector3 from "../assets/images/Vector-3.png";
+import vector4 from "../assets/images/Vector-4.png";
+import vector5 from "../assets/images/Vector-5.png";
+import vector6 from "../assets/images/Vector-6.png";
+import vector7 from "../assets/images/Vector-7.png";
+
 export interface Project {
   id: number;
   title: string;
@@ -21,7 +29,7 @@ export interface Project {
 export const projects: Project[] = [
         {
           id: 1,
-          title: "BUNK BUDDIES",
+          title: "B BUDDIES",
           desc: "VIT ROOMMATE APP",
           fullDesc:
             "The ultimate roommate crisis solver designed for VIT Vellore students. Find highly compatible roommates based on daily habits, sleep schedules, and overall vibes. No more random room allocations!",
@@ -35,7 +43,7 @@ export const projects: Project[] = [
           textColor: "text-newpurple",
           textureGray: "halftone-gray",
           textureColor: "halftone-color",
-          bgImage: "bg-[url('./images/Vector-1.png')]",
+          bgImage: vector1,
           bgSettings: "bg-[position:0%_0%] bg-[length:46%_33%] bg-no-repeat",
         },
         {
@@ -54,7 +62,7 @@ export const projects: Project[] = [
           textColor: "text-white",
           textureGray: "dots-gray",
           textureColor: "dots-color",
-          bgImage: "bg-[url('./images/Vector-2.png')]",
+          bgImage: vector2,
           bgSettings: "bg-[position:100%_0%] bg-[length:60%_39%] bg-no-repeat",
         },
         {
@@ -73,7 +81,7 @@ export const projects: Project[] = [
           textColor: "text-white",
           textureGray: "halftone-gray",
           textureColor: "halftone-color",
-          bgImage: "bg-[url('./images/Vector-3.png')]",
+          bgImage: vector3,
           bgSettings: "bg-[position:0%_50%] bg-[length:40%_44%] bg-no-repeat",
         },
         {
@@ -92,7 +100,7 @@ export const projects: Project[] = [
           textColor: "text-white",
           textureGray: "halftone-gray",
           textureColor: "halftone-color",
-          bgImage: "bg-[url('./images/Vector-5.png')]",
+          bgImage: vector5,
           bgSettings: "bg-[position:100%_48%] bg-[length:42%_31%] bg-no-repeat",
         },
         {
@@ -111,7 +119,7 @@ export const projects: Project[] = [
           textColor: "text-black",
           textureGray: "sunburst-gray",
           textureColor: "sunburst-color",
-          bgImage: "bg-[url('./images/Vector-4.png')]",
+          bgImage: vector4,
           bgSettings: "bg-center bg-[length:37%_42%] bg-no-repeat",
         },
         {
@@ -130,7 +138,7 @@ export const projects: Project[] = [
           textColor: "text-comic-silver",
           textureGray: "dots-gray",
           textureColor: "dots-color",
-          bgImage: "bg-[url('./images/Vector-6.png')]",
+          bgImage: vector6,
           bgSettings: "bg-[position:0%_100%] bg-[length:45%_37%] bg-no-repeat",
         },
         {
@@ -149,7 +157,7 @@ export const projects: Project[] = [
           textColor: "text-comic-yellow",
           textureGray: "halftone-gray",
           textureColor: "halftone-color",
-          bgImage: "bg-[url('./images/Vector-7.png')]",
+          bgImage: vector7,
           bgSettings:
             "bg-[position:100%_100%] bg-[length:71%_42%] bg-no-repeat",
         },

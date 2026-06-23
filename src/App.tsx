@@ -56,6 +56,7 @@ function App() {
         <Home
           isInkMode={isInkMode}
           setIsInkMode={setIsInkMode}
+          setSelectedProject={setSelectedProject}
         />
         <Works
           isInkMode={isInkMode}

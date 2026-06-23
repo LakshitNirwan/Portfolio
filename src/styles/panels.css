@@ -1,0 +1,27 @@
+.panel-1 {
+  clip-path: polygon(0% 0%, 44% 0%, 41% 31.1%, 0% 27%);
+}
+
+.panel-2 {
+  clip-path: polygon(45% 0%, 100% 0%, 100% 37%, 42% 31.2%);
+}
+
+.panel-3 {
+  clip-path: polygon(0% 28%, 31% 31.2%, 38% 65.1%, 0% 69%);
+}
+
+.panel-4 {
+  clip-path: polygon(32% 31.3%, 64% 34.3%, 59% 63.2%, 39% 65%);
+}
+
+.panel-5 {
+  clip-path: polygon(65% 34.4%, 100% 38%, 100% 59%, 60% 63.1%);
+}
+
+.panel-6 {
+  clip-path: polygon(0% 70%, 43% 65.7%, 34% 100%, 0% 100%);
+}
+
+.panel-7 {
+  clip-path: polygon(44% 65.6%, 100% 60%, 100% 100%, 35% 100%);
+}

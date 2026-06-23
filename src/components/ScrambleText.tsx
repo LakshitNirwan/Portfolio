@@ -14,42 +14,41 @@ export default function ScrambleText({
   const [text, setText] = useState(fakeText);
 
   useEffect(() => {
-    if (!reveal) {
+    if (reveal) {
+      let iterations = 0;
+
+      const chars =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
+
+      const interval = setInterval(() => {
+        setText(
+          realText
+            .split("")
+            .map((char, index) => {
+              if (char === " ") return " ";
+
+              if (index < iterations) {
+                return realText[index];
+              }
+
+              return chars[
+                Math.floor(Math.random() * chars.length)
+              ];
+            })
+            .join("")
+        );
+
+        if (iterations >= realText.length) {
+          clearInterval(interval);
+        }
+
+        iterations += 1 / 2;
+      }, 30);
+
+      return () => clearInterval(interval);
+    } else {
       setText(fakeText);
-      return;
     }
-
-    let iterations = 0;
-
-    const chars =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
-
-    const interval = setInterval(() => {
-      setText(
-        realText
-          .split("")
-          .map((char, index) => {
-            if (char === " ") return " ";
-
-            if (index < iterations) {
-              return realText[index];
-            }
-
-            return chars[
-              Math.floor(Math.random() * chars.length)
-            ];
-          })
-          .join("")
-      );
-
-      if (iterations >= realText.length) {
-        clearInterval(interval);
-      }
-
-      iterations += 0.5;
-    }, 30);
-
-    return () => clearInterval(interval);
   }, [reveal, realText, fakeText]);
 
   return (

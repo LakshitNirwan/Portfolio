@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
-import { projects } from "../data/projects.ts";
+
+import { projects } from "../data/projects";
+import ComicBlock from "../components/ComicBlock";
+
 import type { Project } from "../types/projects.ts";
 
 interface WorksProps {
@@ -12,107 +15,49 @@ export default function Works({
   onOpenModal,
 }: WorksProps) {
   return (
-    <section
+    <motion.div
       id="works"
-      className="max-w-7xl mx-auto px-4 md:px-12 py-20 relative z-10"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="w-full flex flex-col items-center px-4 md:px-10 pt-32 pb-12 relative z-10"
     >
-      <motion.div
-        initial={{ scaleX: 0, rotate: 2 }}
-        whileInView={{ scaleX: 1, rotate: 2 }}
-        viewport={{ once: true }}
-        className={`
-          ${
-            isInkMode
-              ? "bg-white text-black border-black"
-              : "bg-black text-white border-white"
-          }
-          border-4
-          inline-block
-          px-6
-          py-2
-          mb-10
-          origin-left
-        `}
-      >
-        <h2 className="font-display text-4xl md:text-5xl">
-          THE ARCHIVES
-        </h2>
-      </motion.div>
-
-      <div
-        className="
-          works-grid
-          relative
-          aspect-square
-          w-full
-          border-4
-          border-black
-          bg-white
-          overflow-hidden
-        "
-      >
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className={`
-              absolute
-              inset-0
-              ${project.clipClass}
-              cursor-pointer
-            `}
-            onClick={() => onOpenModal(project)}
+      <div className="w-full max-w-3xl flex flex-col">
+        <div className="text-center mb-6 relative z-10">
+          <span
+            className="border-4 border-black px-4 sm:px-8 py-3 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl shadow-comic inline-block transform -rotate-1 transition-colors bg-white text-black"
           >
-            <div
-              className={`
-                h-full
-                w-full
-                transition-all
-                duration-300
-                hover:brightness-110
-                ${isInkMode ? project.bgGray : project.bgColor}
-              `}
-            >
-              <div
-                className={`
-                  absolute
-                  ${project.textXY}
-                  -translate-x-1/2
-                  -translate-y-1/2
-                  text-center
-                `}
-              >
-                <h3
-                  className={`
-                    font-display
-                    text-xl
-                    md:text-3xl
-                    ${project.textColor}
-                  `}
-                >
-                  {project.title}
-                </h3>
+            {isInkMode
+              ? "THE ARCHIVES (RAW INK)"
+              : "THE ARCHIVES"}
+          </span>
+        </div>
 
-                <p
-                  className={`
-                    font-bold
-                    text-sm
-                    md:text-lg
-                    ${project.textColor}
-                  `}
-                >
-                  {project.desc}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
+        <div className="works-grid relative w-full aspect-square md:aspect-[2/3] max-h-[1000px] bg-black border-[6px] border-black shadow-[20px_20px_0px_rgba(0,0,0,0.5)] overflow-hidden z-10">
+          {projects.map((p) => (
+            <ComicBlock
+              key={p.id}
+              project={p}
+              isInkMode={isInkMode}
+              onOpenModal={onOpenModal}
+            />
+          ))}
+        </div>
+
+        <div className="text-right mt-6 relative z-10 pr-6">
+          <span className="text-white font-display text-xl opacity-50 tracking-widest">
+            {isInkMode
+              ? "VARIANT ISSUE 1 OF 1"
+              : "PAGE 1 OF 1"}
+          </span>
+        </div>
       </div>
-
       <div className="flex justify-center mt-10">
         <p className="font-display text-xl text-center">
           CLICK ANY PANEL TO OPEN CASE FILE
         </p>
       </div>
-    </section>
+    </motion.div>
   );
 }
+

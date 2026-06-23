@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import ProjectModal from "./components/ProjectModal";
 
 import Works from "./sections/Work.tsx";
+import Home from "./sections/Home";
 
 import type { Project } from "./types/projects.ts";
 
@@ -51,7 +52,11 @@ function App() {
               : "INK MODE"}
           </button>
         </div>
-
+        
+        <Home
+          isInkMode={isInkMode}
+          setIsInkMode={setIsInkMode}
+        />
         <Works
           isInkMode={isInkMode}
           onOpenModal={setSelectedProject}

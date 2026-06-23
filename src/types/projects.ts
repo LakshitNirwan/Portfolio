@@ -6,9 +6,7 @@ export interface Project {
   techStack: string[];
   githubLink: string;
   liveLink: string;
-}
 
-export interface ComicProject extends Project {
   clipClass: string;
   textXY: string;
   bgGray: string;
@@ -20,7 +18,7 @@ export interface ComicProject extends Project {
   bgSettings: string;
 }
 
-export const projects: ComicProject[] = [
+export const projects: Project[] = [
         {
           id: 1,
           title: "BUNK BUDDIES",

@@ -52,7 +52,11 @@ function App() {
               : "INK MODE"}
           </button>
         </div>
-
+        
+        <Home
+          isInkMode={isInkMode}
+          setIsInkMode={setIsInkMode}
+        />
         <Works
           isInkMode={isInkMode}
           onOpenModal={setSelectedProject}

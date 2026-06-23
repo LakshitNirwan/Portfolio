@@ -5,6 +5,7 @@ import App from "./App";
 
 import "./index.css";
 import "./styles/panels.css";
+import "./styles/comic.css";
 
 ReactDOM.createRoot(
   document.getElementById("root")!

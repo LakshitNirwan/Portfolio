@@ -7,6 +7,25 @@ export default {
 
   theme: {
     extend: {
+      boxShadow: {
+      comic: "8px 8px 0px 0px rgba(0,0,0,1)",
+      },
+
+    backgroundImage: {
+      "halftone-gray":
+        "radial-gradient(circle, #555 1px, transparent 1.5px)",
+      "halftone-color":
+        "radial-gradient(circle, rgba(0,0,0,0.3) 1px, transparent 1.5px)",
+      "dots-gray":
+        "radial-gradient(#aaa 1px, transparent 1px)",
+      "dots-color":
+        "radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px)",
+    },
+
+    backgroundSize: {
+      halftone: "8px 8px",
+      dots: "10px 10px",
+    },
       colors: {
         comic: {
           red: "#FF4F4F",
@@ -24,9 +43,12 @@ export default {
           brown: "#7C4F2A",
         },
 
-        newpurple: "#5B3DF5",
-        newyellow: "#FCD34D",
-        newpink: "#F472B6",
+        "comic-paper": "#f4f4f0",
+newpurple: "#2e0457",
+newyellow: "#fcf008",
+newbrown: "#733205",
+newpink: "#db5a9f",
+comicdpurp: "#21023b",
       },
 
       fontFamily: {

@@ -47,7 +47,7 @@ export default function Home({
       id="home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="pt-24 max-w-6xl mx-auto px-4 w-full"
+      className="pt-6 max-w-6xl mx-auto px-4 w-full"
     >
       <div className="flex justify-end w-full mb-8 z-10 relative pr-10">
         <button
@@ -151,7 +151,7 @@ export default function Home({
                 <br />
               </h2>
 
-              <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-9xl text-white text-shadow leading-none tracking-wide mb-4">
+              <h1 className="font-display text-xl sm:text-6xl md:text-7xl lg:text-8xl text-white text-shadow leading-none tracking-wide mb-4">
                 LAKSHIT NIRWAN
               </h1>
 

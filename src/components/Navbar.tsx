@@ -6,7 +6,7 @@ export default function Navbar({
   isInkMode,
 }: NavbarProps) {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-4 md:px-12 py-4 flex justify-center pointer-events-none">
+    <nav className={`fixed top-0 left-0 w-full z-50 px-4 md:px-12 py-4 flex justify-center pointer-events-none ${isInkMode ? "bg-white" : "bg-white"}`}>
       <div
         className="
           nav-inner
@@ -22,6 +22,7 @@ export default function Navbar({
           transform
           -rotate-1
           text-black
+          
         "
       >
         <a

@@ -53,7 +53,7 @@ export default function Works({
         </div>
       </div>
       <div className="flex justify-center mt-10">
-        <p className="font-display text-xl text-center">
+        <p className="font-display text-3xl text-center text-white">
           CLICK ANY PANEL TO OPEN CASE FILE
         </p>
       </div>

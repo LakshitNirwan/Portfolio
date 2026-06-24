@@ -71,7 +71,7 @@ export default function About({
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="pt-32 w-full max-w-6xl mx-auto p-4 flex flex-col relative z-10"
+            className="pt-12 w-full max-w-5xl mx-auto p-4 flex flex-col relative z-10"
           >
             <div className="bg-comic-paper border-4 border-black p-8 shadow-comic relative overflow-hidden mb-16">
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 border-b-4 border-black inline-block">
